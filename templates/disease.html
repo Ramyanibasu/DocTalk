@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Disease Search - DocTalk</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<body style="background: url('/static/pic3.png') no-repeat center/cover;"></body>
+</head>
+
+<body class="disease-page">
+
+
+<header class="hero">
+    <nav>
+        <div class="logo">Doc<span>Talk</span></div>
+    </nav>
+
+    <div class="hero-content">
+        <h1>Disease Diagnosis Guide</h1>
+    </div>
+</header>
+
+
+<section class="content-area">
+
+    <div class="search-card">
+        <form method="POST">
+            <input type="text" name="disease_name" placeholder="Enter disease name...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    {% if result %}
+    <div class="result">
+    <h2>{{ result.title }}</h2>
+    <p><strong>Symptoms:</strong> {{ result.symptoms }}</p>
+    <p><strong>Treatment:</strong> {{ result.treatments }}</p>
+    <p><strong>Investigation:</strong> {{ result.investigations }}</p>
+    <p><strong>Additionals:</strong> {{ result.additional }}</p>
+   </div>
+  {% elif request.method == 'POST' %}
+  <p class="not-found">Disease not found! Check spelling.</p>
+  {% endif %}
+
+
+
+ 
+    <div class="list-card">
+
+        <input type="checkbox" id="toggleList" class="toggle-box">
+
+
+        <label for="toggleList" class="toggle-btn">Available Diseases ▼</label>
+
+ 
+        <ul class="disease-list">
+            {% for key, data in DISEASES.items() %}
+            <li>• {{ data.title }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="back-btn">
+        <a href="/">← Back to Home</a>
+    </div>
+
+</section>

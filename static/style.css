@@ -1,0 +1,275 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#2aa198;
+  --muted:#9aa7b2;
+  --white:#fff;
+}
+
+
+
+
+*{box-sizing:border-box;font-family:Inter, system-ui, Arial, sans-serif}
+body{margin:0;background:linear-gradient(180deg,#0b1220,#071024);color:var(--white);min-height:100vh}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+header{padding:12px 0}
+header h1{margin:0;font-size:22px}
+header a{color:var(--white);text-decoration:none}
+
+.hero-operate{background:rgba(255, 255, 255, 0.393);
+  border-style: solid; 
+  border-width: 2px;
+  border-color:#f8f9fa;
+  margin-top: -30px;
+  float: right;
+  height: 320px; 
+  width: 300px;
+  padding: 40px;
+  border-radius:40px;
+  text-align:center
+  }
+
+.hero-operate h2{font-size:48px;
+  margin:0 0 12px;
+  color: #0f3d5e;}
+
+.hero-operate p{color:#0f3d5e;
+  font-style: italic;
+  font-weight: 450;
+}
+
+.start-btn {
+    display: inline-block;
+    float: none;
+    background-color: #2d8d65;   
+    color: white;
+    padding: 12px 28px;          
+    font-size: 18px;              
+    text-decoration: none;
+    border-radius: 10px;           
+    font-weight: bold;
+    margin-top: 30px;
+    transition: 0.3s;}
+
+
+
+
+
+
+/* ----- Center the page ----- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1a5896;           /* light background */
+    font-family: Arial, sans-serif;
+}
+
+/* ----- Register box design ----- */
+.register-box {
+    background: rgb(146, 164, 202);
+    padding: 30px;
+    width: 300px;                  /* smaller size */
+    text-align: center;            /* center text */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* ----- Inputs styling ----- */
+.register-box input,
+.register-box select {
+    width: 100%;
+    padding: 8px;                  /* smaller input fields */
+    margin: 10px 0;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* ----- Button styling ----- */
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.disease-list{list-style:none;padding:0;margin:0}
+.disease-list li{padding:6px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
+footer{padding:18px 0;color:var(--muted);text-align:center;margin-top:40px}
+
+
+/* ====== DISEASE PAGE FIX & IMPROVED UI ====== */
+.disease-page {
+    background: #e6f7ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+    padding: 50px 10px;
+    text-align: center;
+    color: white;
+    border-radius: 40px;
+    margin-right: 20px;
+    margin-left: 10px;
+    width: 320px;
+    border-color: white;
+    border-width: 4px;
+    border-style: solid;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+.logo span { color: yellow; }
+
+/* Content Layout */
+.content-area {
+    width: 70%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Search Bar Card */
+.search-card {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: sticky;        
+    top: 10px;                /* stays visible while scrolling */
+    z-index: 100;
+}
+
+.search-card input {
+    width: 70%;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #0077b6;
+    border-radius: 5px;
+}
+.search-card button {
+    padding: 10px 18px;
+    margin-left: 10px;
+    font-size: 18px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-card button:hover { background:#005f8a; }
+
+/* Disease List Card */
+.list-card {
+    background: rgb(23, 44, 135);
+    margin-top: 25px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    max-height: 380px;     /* <-- Increased Scroll height */
+    overflow-y: scroll;    /* scroll inside container */
+    scrollbar-width: thin;
+}
+
+.list-card h2 {
+    text-align: center;
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.list-card ul li {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Back Button */
+.back-btn {
+    text-align: center;
+    margin-top: 25px;
+}
+.back-btn a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+/* Hide list initially */
+.toggle-box {
+    display: none;
+}
+
+.toggle-btn {
+    display: block;
+    background: #1e90ff;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #0b70d0;
+}
+
+/* Collapsible animation */
+.disease-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+/* When clicked — expand */
+.toggle-box:checked ~ .disease-list {
+    max-height: 300px;    /* you can increase scroll space */
+}
+
+.disease-list li {
+    margin: 6px 0;
+}
+
+/* Allow scrolling inside if long list */
+.disease-list {
+    overflow-y: auto;
+}
+
+
